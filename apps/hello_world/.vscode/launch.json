@@ -4,15 +4,16 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "(gdb-wsl) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program":"/mnt/c/git/github/main/apps/hello_world/build/helloworld",
-            "cwd": "/mnt/c/git/github/main/apps/hello_world",
+            "program": "${workspaceFolder}/build/helloworld",
             "args": [],
             "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
             "windows": {
                 "MIMode": "gdb",
                 "setupCommands": [
@@ -22,36 +23,7 @@
                         "ignoreFailures": true
                     }
                 ]
-            },
-            "pipeTransport": {
-                "pipeCwd": "",
-                "pipeProgram": "c:\\windows\\sysnative\\bash.exe",
-                "pipeArgs": ["-c"],
-                "debuggerPath": "/usr/bin/gdb"
-            },
-            "sourceFileMap": {
-                "/mnt/c": "c:\\",
             }
-        },
-        {
-            "name": "(gdb-mingw) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/helloworld",
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:\\mingw\\mingw64\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
         }
     ]
 }

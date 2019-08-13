@@ -1,28 +1,16 @@
 {
     "configurations": [
         {
-            "name": "WSL",
-            "intelliSenseMode": "gcc-x64",
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
             "compilerPath": "/usr/bin/gcc",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "cStandard": "c11",
-            "cppStandard": "c++17"
-        },
-        {
-            "name": "MinGW",
-            "intelliSenseMode": "gcc-x64",
-            "compilerPath": "c:/mingw/mingw64/bin/gcc",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
-            "cStandard": "c11",
-            "cppStandard": "c++17"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
     "version": 4

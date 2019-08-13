@@ -4,39 +4,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Make WSL",
+            "label": "Build cmake",
             "type": "shell",
-            "command": "wsl make",
+            "command": "mkdir build;cd build;cmake ..",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            }
         },
         {
-            "label": "Build Make MinGW",
+            "label": "Build Make",
             "type": "shell",
-            "command": "C:\\mingw\\mingw64\\bin\\mingw32-make",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "label": "Build clean on WSL",
-            "type": "shell",
-            "command": "wsl make clean",
+            "command": "make",
             "options": {
                 "cwd": "${workspaceFolder}/build"
             },
@@ -47,35 +29,9 @@
             "problemMatcher": []
         },
         {
-            "label": "CMake WSL",
+            "label": "Build make clean",
             "type": "shell",
-            "command": "wsl cmake ..",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "CMake MinGW",
-            "type": "shell",
-            "command": "cmake .. -DCMAKE_C_COMPILER='C:/mingw/mingw64/bin/gcc.exe' -DCMAKE_CXX_COMPILER='C:/mingw/mingw64/bin/g++.exe' -DCMAKE_MAKE_PROGRAM='C:/mingw/mingw64/bin/mingw32-make' -G'Unix Makefiles'",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Clear build folder",
-            "type": "shell",
-            "command": "wsl rm -R *",
+            "command": "make clean",
             "options": {
                 "cwd": "${workspaceFolder}/build"
             },
